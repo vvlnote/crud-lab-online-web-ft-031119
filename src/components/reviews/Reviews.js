@@ -11,8 +11,8 @@ class Reviews extends Component {
 
   	let reviews = [];
   	if (filteredReviews) {
-  		reviews = filteredReviews.map((review) => {
-  			return <Review review={review} deleteReview={this.props.deleteReview}/>
+  		reviews = filteredReviews.map((review, index) => {
+  			return <Review key={index} review={review} deleteReview={this.props.deleteReview}/>
   		})
   	}
     return (
